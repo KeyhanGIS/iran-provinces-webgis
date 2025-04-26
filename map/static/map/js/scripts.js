@@ -180,7 +180,7 @@ let iranProvincesLayer;
 
 iranProvincesLayer = L.tileLayer.wms("http://localhost:8080/geoserver/iran_provinces/wms", {
   layers: 'iran_provinces:province',   // GeoServer layer name
-  styles: 'provinces',                 // Style name from GeoServer
+  // styles: 'provinces',                 // Style name from GeoServer
   format: 'image/png',
   transparent: true,
 }).on('tileerror', function(errorEvent) {
