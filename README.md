@@ -9,7 +9,7 @@ This project visualizes Iran’s provincial boundaries using **GeoServer WMS**, 
 ## 📺 Demo Video
 
 🎥 Watch the demo on YouTube:  
-[![Watch the video](https://youtu.be/Evt1cmX8OIw?si=TSNGzikFlfzTxBwy)
+https://youtu.be/Evt1cmX8OIw?si=TSNGzikFlfzTxBwy
 
 ---
 
@@ -90,18 +90,7 @@ const iranProvincesLayer = L.tileLayer.wms("http://localhost:8080/geoserver/iran
   layers: "iran_provinces:province",
   format: "image/png",
   transparent: true
-}).on("tileerror", function (errorEvent) {
-  console.error("Tile load error:", errorEvent);
-}).addTo(map);
-
-if (iranProvincesLayer) {
-  overlayMaps["Iran Provinces"] = iranProvincesLayer;
-}
-
-L.control.layers(baseLayers, overlayMaps, {
-  position: "topright",
-  collapsed: false
-}).addTo(map);
+})
 ```
 
 You can find the JavaScript code for the WMS layer integration in `static/js/map.js`.
